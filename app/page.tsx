@@ -1,3 +1,4 @@
+import Experiences from "@/components/Experiences"    
 import About from "./(about)/page"
 
 const Portfolio = () => {
@@ -16,6 +17,7 @@ const Portfolio = () => {
 
       <main className='pt-24'>
         <About />
+        <Experiences />
       </main>
 
 
