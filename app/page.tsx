@@ -1,5 +1,5 @@
 import Experiences from "@/components/Experiences"    
-import About from "./(about)/page"
+import About from "@/components/About"
 
 const Portfolio = () => {
 
