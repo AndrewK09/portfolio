@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  font-size: 20px
+}
+
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -28,5 +33,9 @@ section {
 }
 
 .head_text {
-  @apply text-3xl font-medium mb-6
+  @apply text-2xl font-medium mb-6 text-white
+}
+
+.tech {
+  @apply rounded-full bg-blue-950/80 items-center py-1 px-3 font-medium text-white/70 leading-5
 }
