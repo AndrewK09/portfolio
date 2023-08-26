@@ -9,7 +9,7 @@ const Experience = ({
 }) => {
   return (
     <div className="mb-8">
-      <header className="mb-1 ">{date}</header>
+      <header className="mb-1 text-sm">{date}</header>
       <div>
         <h3 className="mb-3 text-lg font-medium text-slate-200">{title}</h3>
         <p>{description}</p>
