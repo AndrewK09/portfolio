@@ -9,9 +9,9 @@ const Experience = ({
 }) => {
   return (
     <div className="mb-8">
-      <header className="mb-1">{date}</header>
+      <header className="mb-1 ">{date}</header>
       <div>
-        <h3 className="mb-3 text-lg font-medium text-white">{title}</h3>
+        <h3 className="mb-3 text-lg font-medium text-slate-200">{title}</h3>
         <p>{description}</p>
       </div>
     </div>
@@ -20,7 +20,7 @@ const Experience = ({
 
 const Experiences = () => {
   return (
-    <section>
+    <section id="experience">
       <h1 className="head_text">EXPERIENCE</h1>
 
       <Experience
