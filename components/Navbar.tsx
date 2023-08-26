@@ -17,7 +17,7 @@ const navbarLinks = ['about', 'experience', 'projects', 'contact'];
 
 const Navbar = () => {
   return (
-    <nav className="flex">
+    <nav className="hidden lg:block">
       <ul>
         {navbarLinks.map((link) => (
           <li key={link}>
