@@ -14,10 +14,10 @@ const Portfolio = () => {
     <div className=" lg:px-18 mx-auto w-full max-w-screen-xl px-10 lg:flex lg:max-w-screen-xl lg:justify-between lg:gap-x-28 lg:px-16">
       <header className="py-52 lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:min-w-fit lg:flex-col lg:justify-between lg:py-24 lg:pb-20 2xl:w-2/5">
         <div>
-          <h1 className="text-4xl font-extrabold text-slate-100 sm:text-6xl md:text-7xl lg:text-6xl">
+          <h1 className="xs:text-5xl text-4xl font-extrabold text-slate-100 sm:text-6xl md:text-7xl lg:text-6xl">
             Andrew Kan
           </h1>
-          <h2 className="mt-3 text-xl font-medium text-slate-300 sm:text-2xl md:text-3xl lg:text-2xl">
+          <h2 className="xs:text-xl mt-6 text-xl font-medium text-slate-300 sm:text-2xl md:text-3xl lg:text-2xl">
             Full Stack Software Engineer
           </h2>
           <p className="lg: mb-8 mt-6 text-lg lg:max-w-xs">
@@ -28,7 +28,7 @@ const Portfolio = () => {
           <Navbar />
         </div>
 
-        <ul className="lg: -ml-2 mt-4 flex">
+        <ul className="lg: -ml-2 mt-10 flex">
           <li>
             <SocialIconWrap url="https://github.com/AndrewK09" />
           </li>
