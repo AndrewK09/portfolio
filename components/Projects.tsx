@@ -56,8 +56,8 @@ const Project = ({
 
 const Projects = () => {
   return (
-    <section>
-      <h1 className="head_text p-2 pt-4">Projects</h1>
+    <section id="projects">
+      <h1 className="head_text p-2 pt-4">PROJECTS</h1>
       <Project
         title="Test project 1"
         description="Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more."
