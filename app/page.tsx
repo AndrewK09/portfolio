@@ -2,6 +2,7 @@ import Experiences from '@/components/Experiences';
 import About from '@/components/About';
 import Projects from '@/components/Projects';
 import { SocialIcon } from 'react-social-icons';
+import Navbar from '@/components/Navbar';
 
 const SocialIconWrap = ({ url }: { url: string }) => {
   return <SocialIcon url={url} fgColor="white" bgColor="transparent" />;
@@ -18,10 +19,12 @@ const Portfolio = () => {
           <h2 className="mt-3 text-xl font-medium text-slate-300 sm:text-2xl md:text-3xl xl:text-xl">
             Full Stack Software Engineer
           </h2>
-          <p className="mt-6 max-w-xs text-lg">
+          <p className="mt-6 max-w-xs text-lg xl:mb-16">
             I build accessible, inclusive products and digital experiences for
             the web.
           </p>
+
+          <Navbar />
         </div>
 
         <ul className="-ml-2 mt-4 flex">

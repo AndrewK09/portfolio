@@ -29,11 +29,11 @@ body {
 }
 
 section {
-  @apply mb-20
+  @apply mb-24 scroll-mt-24
 }
 
 .head_text {
-  @apply text-2xl font-medium mb-6 text-white
+  @apply text-2xl font-bold mb-6 text-slate-200
 }
 
 .tech {
