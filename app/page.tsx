@@ -1,7 +1,8 @@
-import Experiences from '@/components/Experiences';
-import About from '@/components/About';
-import Projects from '@/components/Projects';
 import { SocialIcon } from 'react-social-icons';
+
+import About from '@/components/About';
+import Experiences from '@/components/Experiences';
+import Projects from '@/components/Projects';
 import Navbar from '@/components/Navbar';
 
 const SocialIconWrap = ({ url }: { url: string }) => {
