@@ -1,15 +1,8 @@
 'use client';
 
-import { useState } from 'react';
-
 import Link from 'next/link';
-
-enum ActiveLinkType {
-  ABOUT = 'about',
-  EXPERIENCE = 'experience',
-  PROJECT = 'projects',
-  CONTACT = 'contact',
-}
+import { NavLinkType, navLinks } from '@/lib/data';
+import { useActiveSectionContext } from '@/lib/hooks';
 
 const NavbarLink = ({
   href,
@@ -18,13 +11,13 @@ const NavbarLink = ({
 }: {
   href: string;
   label: string;
-  activeLink: ActiveLinkType;
+  activeLink: NavLinkType;
 }) => {
   return (
     <Link
-      href={`#${href}`}
+      href={href}
       className={`${
-        activeLink === href ? 'active ' : ''
+        activeLink === label ? 'active ' : ''
       }group flex items-center py-3`}
     >
       <span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200"></span>
@@ -35,24 +28,16 @@ const NavbarLink = ({
   );
 };
 
-const navbarLinks = [
-  ActiveLinkType.ABOUT,
-  ActiveLinkType.EXPERIENCE,
-  ActiveLinkType.PROJECT,
-  ActiveLinkType.CONTACT,
-];
-
 const Navbar = () => {
-  const [activeLink, setActiveLink] = useState<ActiveLinkType>(
-    ActiveLinkType.ABOUT
-  );
+  // const [activeLink, setActiveL ink] = useState<NavLinkType>(NavLinkType.ABOUT);
+  const { activeSection, setActiveSection } = useActiveSectionContext();
 
   return (
     <nav className="hidden lg:block">
       <ul className="w-max">
-        {navbarLinks.map((link) => (
-          <li key={link} onClick={() => setActiveLink(link)}>
-            <NavbarLink href={link} label={link} activeLink={activeLink} />
+        {navLinks.map(({ name, href }) => (
+          <li key={name} onClick={() => setActiveSection(name)}>
+            <NavbarLink href={href} label={name} activeLink={activeSection} />
           </li>
         ))}
       </ul>
