@@ -4,6 +4,7 @@ import About from '@/components/About';
 import Experiences from '@/components/Experiences';
 import Projects from '@/components/Projects';
 import Navbar from '@/components/Navbar';
+import Contact from '@/components/Contact';
 
 const SocialIconWrap = ({ url }: { url: string }) => {
   return <SocialIcon url={url} fgColor="white" bgColor="transparent" />;
@@ -43,6 +44,7 @@ const Portfolio = () => {
         <About />
         <Experiences />
         <Projects />
+        <Contact />
       </main>
     </div>
   );
