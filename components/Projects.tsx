@@ -68,6 +68,28 @@ const Projects = () => {
           Technologies.POSTGRES,
         ]}
       />
+
+      <Project
+        title="Test project 2"
+        description="Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more."
+        image={{ src: project1, alt: 'picture' }}
+        technologies={[
+          Technologies.REACT,
+          Technologies.NODE,
+          Technologies.POSTGRES,
+        ]}
+      />
+
+      <Project
+        title="Test project 3"
+        description="Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more."
+        image={{ src: project1, alt: 'picture' }}
+        technologies={[
+          Technologies.REACT,
+          Technologies.NODE,
+          Technologies.POSTGRES,
+        ]}
+      />
     </section>
   );
 };
