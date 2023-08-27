@@ -1,3 +1,8 @@
+'use client';
+
+import { NavLinkType } from '@/lib/data';
+import { useSectionInView } from '@/lib/hooks';
+
 const Experience = ({
   date,
   title,
@@ -19,8 +24,10 @@ const Experience = ({
 };
 
 const Experiences = () => {
+  const { ref } = useSectionInView(NavLinkType.EXPERIENCE);
+
   return (
-    <section id="experience">
+    <section id={NavLinkType.EXPERIENCE} ref={ref}>
       <h1 className="head_text">EXPERIENCE</h1>
 
       <Experience

@@ -1,6 +1,10 @@
+'use client';
+
 import Image, { StaticImageData } from 'next/image';
 
 import project1 from '@/public/test-background.png';
+import { useSectionInView } from '@/lib/hooks';
+import { NavLinkType } from '@/lib/data';
 
 enum Technologies {
   REACT = 'React',
@@ -25,12 +29,12 @@ const Project = ({
   websiteUrl?: string;
 }) => {
   return (
-    <div className="relative mb-8">
-      <div className="-z-10 opacity-20">
+    <div className="relative mb-8 flex flex-col items-center justify-center">
+      <div className="opacity-2 -z-10 w-full border-2">
         <Image src={image.src} alt={image.alt} />
       </div>
 
-      <div className="absolute left-0 top-0 z-10 flex-col px-10 py-16 ">
+      <div className="absolute left-0 top-0 z-10 h-full w-full flex-col px-10 py-16 ">
         <header className="mb-6 text-2xl font-bold ">{title}</header>
 
         <div className="mb-6 rounded-md bg-slate-900 px-5 py-5 text-white/70 shadow-md">
@@ -55,12 +59,14 @@ const Project = ({
 };
 
 const Projects = () => {
+  const { ref } = useSectionInView(NavLinkType.PROJECT, 0.5);
+
   return (
-    <section id="projects">
+    <section id={NavLinkType.PROJECT} ref={ref}>
       <h1 className="head_text p-2 pt-4">PROJECTS</h1>
       <Project
         title="Test project 1"
-        description="Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more."
+        description="System to showcase the real time use of xAPI and a LRS system to collect, save and use data to analyze and generate report."
         image={{ src: project1, alt: 'picture' }}
         technologies={[
           Technologies.REACT,
@@ -71,7 +77,7 @@ const Projects = () => {
 
       <Project
         title="Test project 2"
-        description="Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more."
+        description="System to showcase the real time use of xAPI and a LRS system to collect, save and use data to analyze and generate report."
         image={{ src: project1, alt: 'picture' }}
         technologies={[
           Technologies.REACT,
@@ -82,7 +88,7 @@ const Projects = () => {
 
       <Project
         title="Test project 3"
-        description="Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more."
+        description="System to showcase the real time use of xAPI and a LRS system to collect, save and use data to analyze and generate report."
         image={{ src: project1, alt: 'picture' }}
         technologies={[
           Technologies.REACT,

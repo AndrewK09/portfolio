@@ -1,11 +1,14 @@
 'use client';
 
 import React, { ChangeEvent, useState } from 'react';
+import Link from 'next/link';
 import emailjs from '@emailjs/browser';
 
-import Link from 'next/link';
+import { useSectionInView } from '@/lib/hooks';
+import { NavLinkType } from '@/lib/data';
 
 const Contact = () => {
+  const { ref } = useSectionInView(NavLinkType.CONTACT);
   const [contactForm, setContactForm] = useState({
     name: '',
     email: '',
@@ -24,7 +27,7 @@ const Contact = () => {
     }));
   };
 
-  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const mailOptions = {
@@ -33,16 +36,18 @@ const Contact = () => {
       message: `Name: ${contactForm.name}\nEmail: ${contactForm.email}\nMessage: ${contactForm.message}`,
     };
 
-    emailjs.send(
-      process.env.NEXT_PUBLIC_SERVICE_ID ?? '',
-      process.env.NEXT_PUBLIC_TEMPLATE_ID ?? '',
-      mailOptions,
-      process.env.NEXT_PUBLIC_PUBLIC_KEY ?? ''
-    );
+    try {
+      emailjs.send(
+        process.env.NEXT_PUBLIC_SERVICE_ID ?? '',
+        process.env.NEXT_PUBLIC_TEMPLATE_ID ?? '',
+        mailOptions,
+        process.env.NEXT_PUBLIC_PUBLIC_KEY ?? ''
+      );
+    } catch (error) {}
   };
 
   return (
-    <section>
+    <section id={NavLinkType.CONTACT} ref={ref}>
       <h1 className="head_text">Contact</h1>
       <p>
         If you have any questions or want to work together, please fill out the

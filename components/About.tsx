@@ -1,6 +1,13 @@
+'use client';
+
+import { NavLinkType } from '@/lib/data';
+import { useSectionInView } from '@/lib/hooks';
+
 const About = () => {
+  const { ref } = useSectionInView(NavLinkType.ABOUT);
+
   return (
-    <section id="about">
+    <section id="about" ref={ref}>
       <h1 className="head_text">ABOUT</h1>
       <p className="mb-4">
         {`Back in 2012, I decided to try my hand at creating custom Tumblr themes
