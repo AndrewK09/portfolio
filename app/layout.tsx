@@ -1,3 +1,4 @@
+import ActiveSectionContextProvider from '@/context/active-section-context';
 import './globals.css';
 import type { Metadata } from 'next';
 
@@ -12,9 +13,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body className="bg-slate-700 leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900">
-        {children}
+        <ActiveSectionContextProvider>{children}</ActiveSectionContextProvider>
       </body>
     </html>
   );
