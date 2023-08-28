@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+
 import { NavLinkType } from '@/lib/data';
 import { useSectionInView } from '@/lib/hooks';
 
@@ -46,6 +48,12 @@ const Experiences = () => {
         Utilized Agile methodology to meet team development goals.
         Evaluated the technical abilities of prospective students with live coding interviews."
       />
+
+      <a href="/resume.pdf" download className="font-bold text-white">
+        <span className="border-b border-transparent pb-1  hover:border-white ">
+          Download Resume
+        </span>
+      </a>
     </section>
   );
 };
