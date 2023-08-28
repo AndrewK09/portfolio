@@ -59,24 +59,32 @@ const Contact = () => {
 
       <form className="flex flex-col gap-y-1" onSubmit={onSubmit}>
         <input
-          placeholder="Name"
+          className="form_input"
+          placeholder="Your name"
           type="text"
           id="name"
           onChange={onFieldChange}
         />
         <input
-          placeholder="Email"
+          className="form_input"
+          placeholder="Your email"
           type="text"
           id="email"
           onChange={onFieldChange}
         />
         <textarea
-          placeholder="Your Message"
+          className="form_textarea"
+          placeholder="Your message"
           id="message"
           onChange={onFieldChange}
         />
 
-        <button type="submit">Submit</button>
+        <button
+          type="submit"
+          className="bg-primary-orange mt-2 w-fit rounded-full bg-blue-950/80 px-8 py-2 text-white"
+        >
+          Submit
+        </button>
       </form>
     </section>
   );
