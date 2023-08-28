@@ -32,7 +32,7 @@ section {
 }
 
 .tech {
-  @apply rounded-full bg-blue-950/80 items-center py-1 px-3 font-medium text-white/70 leading-5
+  @apply rounded-full bg-blue-950/80 items-center py-1 px-3 font-medium text-white/70 leading-5 border border-white/5
 }
 
 
@@ -42,4 +42,12 @@ section {
 
 .active .nav-text {
   @apply text-slate-200
+}
+
+.form_textarea {
+  @apply w-full flex rounded-lg h-52 mt-2 p-3 text-white outline-0 bg-slate-600/60;
+}
+
+.form_input {
+  @apply w-full flex rounded-lg mt-2 p-3 text-white outline-0 bg-slate-600/60;
 }
