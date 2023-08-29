@@ -3,7 +3,7 @@ export enum NavLinkType {
   EXPERIENCE = 'experience',
   PROJECT = 'projects',
   CONTACT = 'contact',
-  TECHNOLOGY = 'technology',
+  TECHNOLOGY = 'technical skills',
 }
 
 export const navLinks = [
