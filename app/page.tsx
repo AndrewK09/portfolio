@@ -5,6 +5,7 @@ import Experiences from '@/components/Experiences';
 import Projects from '@/components/Projects';
 import Navbar from '@/components/Navbar';
 import Contact from '@/components/Contact';
+import Technologies from '@/components/Technologies';
 
 const SocialIconWrap = ({ url }: { url: string }) => {
   return <SocialIcon url={url} fgColor="white" bgColor="transparent" />;
@@ -12,7 +13,7 @@ const SocialIconWrap = ({ url }: { url: string }) => {
 
 const Portfolio = () => {
   return (
-    <div className=" lg:px-18 mx-auto w-full max-w-screen-xl px-10 lg:flex lg:max-w-screen-xl lg:justify-between lg:gap-x-28 lg:px-16">
+    <div className=" lg:px-18 mx-auto w-full max-w-screen-xl px-10 lg:flex lg:justify-between lg:gap-x-28 lg:px-16">
       <header className="py-52 lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:min-w-fit lg:flex-col lg:justify-between lg:py-24 lg:pb-20 2xl:w-2/5">
         <div>
           <h1 className="xs:text-5xl text-4xl font-extrabold text-slate-100 sm:text-6xl md:text-7xl lg:text-6xl">
@@ -42,6 +43,7 @@ const Portfolio = () => {
 
       <main className="w-auto  lg:py-24">
         <About />
+        <Technologies />
         <Experiences />
         <Projects />
         <Contact />
