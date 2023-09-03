@@ -1,25 +1,20 @@
-import { SocialIcon } from 'react-social-icons';
-
 import About from '@/components/About';
 import Experiences from '@/components/Experiences';
 import Projects from '@/components/Projects';
 import Navbar from '@/components/Navbar';
 import Contact from '@/components/Contact';
 import Technologies from '@/components/Technologies';
-
-const SocialIconWrap = ({ url }: { url: string }) => {
-  return <SocialIcon url={url} fgColor="white" bgColor="transparent" />;
-};
+import SocialIconWrap from '@/components/SocialIconWrap';
 
 const Portfolio = () => {
   return (
     <div className=" lg:px-18 mx-auto w-full max-w-screen-xl px-10 lg:flex lg:justify-between lg:gap-x-28 lg:px-16">
       <header className="py-52 lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:min-w-fit lg:flex-col lg:justify-between lg:py-24 lg:pb-20 2xl:w-2/5">
         <div>
-          <h1 className="xs:text-5xl text-4xl font-extrabold text-slate-100 sm:text-6xl md:text-7xl lg:text-6xl">
+          <h1 className="text-4xl font-extrabold text-slate-100 xs:text-5xl sm:text-6xl md:text-7xl lg:text-6xl">
             Andrew Kan
           </h1>
-          <h2 className="xs:text-xl mt-6 text-xl font-medium text-slate-200 sm:text-2xl md:text-3xl lg:text-2xl">
+          <h2 className="mt-6 text-xl font-medium text-slate-200 xs:text-xl sm:text-2xl md:text-3xl lg:text-2xl">
             Full Stack Software Engineer
           </h2>
           <p className="lg: mb-8 mt-6 text-lg lg:max-w-xs">
