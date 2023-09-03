@@ -52,7 +52,7 @@ const Contact = () => {
       <p>
         If you have any questions or want to work together, please fill out the
         form below or email me at{' '}
-        <Link href="mailto:andrewkn09@gmail.com" className="font-bold">
+        <Link href="mailto:andrewkn09@gmail.com" className="link-indicator">
           Andrewkn09@gmail.com
         </Link>
       </p>
