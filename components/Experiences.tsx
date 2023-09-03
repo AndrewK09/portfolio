@@ -49,10 +49,8 @@ const Experiences = () => {
         Evaluated the technical abilities of prospective students with live coding interviews."
       />
 
-      <a href="/resume.pdf" download className="font-bold text-white">
-        <span className="border-b border-transparent pb-1  hover:border-white ">
-          Download Resume
-        </span>
+      <a href="/resume.pdf" download>
+        <span className="link-indicator">Download Resume</span>
       </a>
     </section>
   );
