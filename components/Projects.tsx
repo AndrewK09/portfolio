@@ -1,10 +1,13 @@
 'use client';
 
 import Image, { StaticImageData } from 'next/image';
+import Link from 'next/image';
 
 import project1 from '@/public/test-background.png';
 import { useSectionInView } from '@/lib/hooks';
 import { NavLinkType } from '@/lib/data';
+import ProjectImage from './ProjectImage';
+import SocialIconWrap from './SocialIconWrap';
 
 enum Technologies {
   REACT = 'React',
@@ -29,18 +32,19 @@ const Project = ({
   websiteUrl?: string;
 }) => {
   return (
-    <div className="relative mb-8 flex flex-col items-center justify-center">
-      <div className="opacity-2 -z-10 w-full border-2">
-        <Image src={image.src} alt={image.alt} />
+    <li className="relative mb-12 grid grid-cols-6">
+      <div className="relative -z-10 col-span-full row-span-full shadow-lg shadow-blue-950">
+        <a>
+          <Image src={image.src} alt={image.alt} className="opacity-10" />
+        </a>
       </div>
 
-      <div className="absolute left-0 top-0 z-10 h-full w-full flex-col px-10 py-16 ">
-        <header className="mb-6 text-2xl font-bold ">{title}</header>
+      <div className="col-span-full row-span-full px-12 py-14 ">
+        <header className="mb-10 text-xl font-bold text-white ">{title}</header>
 
-        <div className="mb-6 rounded-md bg-slate-900 px-5 py-5 text-white/70 shadow-md">
+        <div className="mb-6 rounded-md bg-blue-950 px-5 py-5 text-white/70 shadow-md ">
           <p>{description}</p>
         </div>
-
         <ul className="mb-6 flex flex-wrap space-x-4">
           {technologies.map((technology) => (
             <li className="tech" key={technology}>
@@ -50,11 +54,15 @@ const Project = ({
         </ul>
 
         <div className="space-x-4">
-          {githubUrl ? <span>Git</span> : null}
-          {websiteUrl ? <span>Git</span> : null}
+          {githubUrl ? (
+            <SocialIconWrap url="https://github.com/AndrewK09" />
+          ) : null}
+          {websiteUrl ? (
+            <SocialIconWrap url="https://www.linkedin.com/in/andrew-kn/" />
+          ) : null}
         </div>
       </div>
-    </div>
+    </li>
   );
 };
 
@@ -73,6 +81,8 @@ const Projects = () => {
           Technologies.NODE,
           Technologies.POSTGRES,
         ]}
+        githubUrl="test/test"
+        websiteUrl="test/test"
       />
 
       <Project
@@ -84,6 +94,7 @@ const Projects = () => {
           Technologies.NODE,
           Technologies.POSTGRES,
         ]}
+        githubUrl="test/test"
       />
 
       <Project
@@ -95,6 +106,8 @@ const Projects = () => {
           Technologies.NODE,
           Technologies.POSTGRES,
         ]}
+        githubUrl="test/test"
+        websiteUrl="test/test"
       />
     </section>
   );
