@@ -84,3 +84,14 @@ export const OtherTechnologies = [
   'Chai',
   'Socket.io',
 ];
+
+export const SPJTechnologies = [
+  'JavaScript',
+  'TypeScript',
+  'React',
+  'Redux',
+  'Node.js',
+  'Express',
+  'PostgreSQL',
+  'Sequelize',
+];
