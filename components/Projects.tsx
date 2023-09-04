@@ -8,7 +8,7 @@ import { ProjectData } from '@/lib/project-data';
 
 import SocialIconWrap from './SocialIconWrap';
 
-const ProjectItem = ({
+const ProjectListItem = ({
   title,
   description,
   image,
@@ -77,16 +77,15 @@ const Projects = () => {
       <h1 className="head_text p-2 pt-4">PROJECTS</h1>
       <ul>
         {ProjectData.map((project) => (
-          <li key={project.title}>
-            <ProjectItem
-              title={project.title}
-              description={project.description}
-              image={project.image}
-              technologies={project.technologies}
-              githubUrl={project.githubUrl}
-              websiteUrl={project.websiteUrl}
-            />
-          </li>
+          <ProjectListItem
+            key={project.title}
+            title={project.title}
+            description={project.description}
+            image={project.image}
+            technologies={project.technologies}
+            githubUrl={project.githubUrl}
+            websiteUrl={project.websiteUrl}
+          />
         ))}
       </ul>
     </section>
