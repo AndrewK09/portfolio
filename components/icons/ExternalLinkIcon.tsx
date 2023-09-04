@@ -1,4 +1,4 @@
-export const RightArrowIcon = ({ className }: { className: string }) => {
+export const ExternalLinkIcon = ({ className }: { className: string }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,4 +15,4 @@ export const RightArrowIcon = ({ className }: { className: string }) => {
   );
 };
 
-export default RightArrowIcon;
+export default ExternalLinkIcon;
