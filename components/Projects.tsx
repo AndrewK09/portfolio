@@ -35,21 +35,26 @@ const Project = ({
   websiteUrl?: string;
 }) => {
   return (
-    <li className="relative mb-12 grid grid-cols-6 grid-rows-6 ">
+    <li className="relative mb-12 list-none sm:grid sm:grid-cols-6 sm:grid-rows-6">
       <div className="relative -z-10 col-span-full row-span-full shadow-lg shadow-blue-950">
-        <a>
-          <Image
-            src={image.src}
-            alt={image.alt}
-            className="opacity-10"
-            objectFit="cover"
-            layout="fill"
-          />
-        </a>
+        <Image
+          src={image.src}
+          alt={image.alt}
+          className="opacity-10"
+          objectFit="cover"
+          layout="fill"
+        />
       </div>
 
-      <div className="relative col-span-full row-span-full px-12 py-12 ">
+      <div className="relative sm:col-span-full sm:row-span-full sm:px-12 sm:py-12 ">
         <header className="mb-10 text-xl font-bold text-white ">{title}</header>
+
+        <Image
+          src={image.src}
+          alt={image.alt}
+          className="mb-6 shadow-lg shadow-blue-900 sm:hidden"
+          objectFit="cover"
+        />
 
         <div className="mb-6 rounded-md bg-blue-950 px-5 py-5 text-white/70 shadow-md ">
           <p>{description}</p>
@@ -62,7 +67,7 @@ const Project = ({
           ))}
         </ul>
 
-        <div className="space-x-4">
+        <div className="flex flex-row justify-end space-x-4">
           {githubUrl ? (
             <SocialIconWrap url="https://github.com/AndrewK09" />
           ) : null}
