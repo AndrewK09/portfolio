@@ -16,6 +16,13 @@ const config: Config = {
       screens: {
         xs: '390px',
       },
+      colors: {
+        'primary-navy': '#0B0C10',
+        'secondary-navy': '#1F2833',
+        'primary-gray': '#C5C6C7',
+        'primary-green': '#45A29E',
+        'secondary-green': '#66FCF1',
+      },
     },
   },
   plugins: [],
