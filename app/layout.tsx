@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="bg-slate-700 leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900">
+      <body className="bg-primary-navy selection:bg-secondary-green selection:text-secondary-navy leading-relaxed text-slate-400 antialiased">
         <ActiveSectionContextProvider>{children}</ActiveSectionContextProvider>
       </body>
     </html>

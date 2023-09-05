@@ -8,8 +8,8 @@ import SocialIconWrap from '@/components/SocialIconWrap';
 
 const Portfolio = () => {
   return (
-    <div className=" lg:px-18 mx-auto w-full max-w-screen-xl px-4 xs:px-10 lg:flex lg:justify-between lg:gap-x-28 lg:px-16">
-      <header className="l g:top-0 py-52  lg:sticky lg:flex lg:max-h-screen lg:min-w-fit lg:flex-col lg:justify-between lg:py-24 lg:pb-20 2xl:w-2/5">
+    <div className=" mx-auto w-full max-w-screen-xl px-4 xs:px-10 md:px-20 lg:flex lg:justify-between lg:gap-x-28 lg:px-16">
+      <header className="py-52 lg:sticky  lg:top-0 lg:flex lg:max-h-screen lg:min-w-fit lg:flex-col lg:justify-between lg:py-24 lg:pb-20 2xl:w-2/5">
         <div>
           <h1 className="text-4xl font-extrabold text-slate-100 xs:text-5xl sm:text-6xl md:text-7xl lg:text-6xl">
             Andrew Kan

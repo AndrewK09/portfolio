@@ -24,7 +24,7 @@ const ProjectListItem = ({
   websiteUrl?: string;
 }) => {
   return (
-    <li className=" relative mb-12 list-none sm:grid sm:grid-cols-6 sm:grid-rows-6">
+    <li className="relative mb-12 list-none sm:grid sm:grid-cols-6 sm:grid-rows-6">
       <div className="shadow-secondary-navy relative -z-10 col-span-full row-span-full shadow-lg">
         <Image
           src={image.src}
@@ -70,7 +70,7 @@ const ProjectListItem = ({
 };
 
 const Projects = () => {
-  const { ref } = useSectionInView(NavLinkType.PROJECT, 0.5);
+  const { ref } = useSectionInView(NavLinkType.PROJECT, 0.25);
 
   return (
     <section id={NavLinkType.PROJECT} ref={ref}>

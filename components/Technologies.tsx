@@ -12,7 +12,8 @@ const TechnologyList = ({
 }) => {
   return (
     <>
-      <h2 className="mb-2 font-bold">{`${category}:`} </h2>
+      <h2 className="mb-2 font-bold text-slate-200">{`${category}:`} </h2>
+
       <ul className="mb-6 flex flex-row flex-wrap gap-x-2">
         {technologies.map((technology) => (
           <li className="tech" key={technology}>
