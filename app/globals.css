@@ -2,26 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
-}
 
 section {
   @apply mb-24 scroll-mt-24
@@ -32,7 +13,7 @@ section {
 }
 
 .tech {
-  @apply rounded-full bg-blue-950/80 items-center py-1 px-3 font-medium text-white/70 leading-5 border border-white/5
+  @apply rounded-full bg-primary-green/80 items-center py-1 px-3 font-medium text-white/70 leading-5 mb-2 text-sm
 }
 
 
