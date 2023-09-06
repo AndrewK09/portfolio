@@ -12,14 +12,14 @@ const ProjectListItem = ({
   title,
   description,
   image,
-  technologies,
+  technologies = [],
   githubUrl,
   websiteUrl,
 }: {
   title: string;
   description: string;
   image: { src: StaticImageData; alt: string };
-  technologies: string[];
+  technologies?: string[];
   githubUrl?: string;
   websiteUrl?: string;
 }) => {
@@ -31,7 +31,7 @@ const ProjectListItem = ({
           alt={image.alt}
           className="opacity-10"
           objectFit="cover"
-          layout="fill"
+          fill
         />
       </div>
 
@@ -48,7 +48,7 @@ const ProjectListItem = ({
         <div className="mb-6 rounded-md text-white/70">
           <p>{description}</p>
         </div>
-        <ul className="mb-6 flex flex-wrap space-x-4">
+        <ul className="mb-6 flex flex-wrap gap-x-2">
           {technologies.map((technology) => (
             <li className="tech" key={technology}>
               {technology}
@@ -57,12 +57,8 @@ const ProjectListItem = ({
         </ul>
 
         <div className="flex flex-row justify-end space-x-4">
-          {githubUrl ? (
-            <SocialIconWrap url="https://github.com/AndrewK09" />
-          ) : null}
-          {websiteUrl ? (
-            <SocialIconWrap url="https://www.linkedin.com/in/andrew-kn/" />
-          ) : null}
+          {githubUrl ? <SocialIconWrap url={githubUrl} /> : null}
+          {websiteUrl ? <SocialIconWrap url={websiteUrl} /> : null}
         </div>
       </div>
     </li>
