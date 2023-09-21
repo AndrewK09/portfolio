@@ -83,9 +83,11 @@ const ExperienceListItem = ({
 
       <p className="mb-3">{description}</p>
 
-      <ExperienceLinksList links={links} />
+      {links.length ? <ExperienceLinksList links={links} /> : null}
 
-      <ExperienceTechList technologies={technologies} />
+      {technologies.length ? (
+        <ExperienceTechList technologies={technologies} />
+      ) : null}
     </li>
   );
 };

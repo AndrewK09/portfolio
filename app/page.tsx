@@ -3,6 +3,7 @@ import Experiences from '@/components/Experiences';
 import Projects from '@/components/Projects';
 import Navbar from '@/components/Navbar';
 import Contact from '@/components/Contact';
+import Footer from '@/components/Footer';
 import Technologies from '@/components/Technologies';
 import SocialIconWrap from '@/components/SocialIconWrap';
 
@@ -36,12 +37,13 @@ const Portfolio = () => {
         </ul>
       </header>
 
-      <main className="w-auto  lg:py-24">
+      <main className="w-auto py-12 lg:py-24">
         <About />
         <Technologies />
         <Experiences />
         <Projects />
         <Contact />
+        <Footer />
       </main>
     </div>
   );

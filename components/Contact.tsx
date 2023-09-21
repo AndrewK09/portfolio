@@ -116,7 +116,7 @@ const Contact = () => {
 
         <button
           type="submit"
-          className="bg-primary-orange mt-2 w-fit rounded-full bg-blue-950/80 px-8 py-2 text-white"
+          className="bg-primary-orange mt-4 w-fit rounded-full bg-blue-950/80 px-8 py-2 text-white "
           disabled={
             formStatus === LOAD_STATE.IN_PROGRESS ||
             formStatus === LOAD_STATE.SUCCESS
