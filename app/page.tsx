@@ -19,8 +19,7 @@ const Portfolio = () => {
             Full Stack Software Engineer
           </h2>
           <p className="lg: mb-8 mt-6 text-lg lg:max-w-xs">
-            I build accessible, inclusive products and digital experiences for
-            the web.
+            A reliable, team-oriented software engineer
           </p>
 
           <Navbar />
