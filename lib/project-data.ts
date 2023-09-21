@@ -51,19 +51,19 @@ const minesweeperClone = {
   githubUrl: 'https://github.com/AndrewK09/Minesweeper',
 };
 
-const dummyData = {
-  title: 'Test 3',
-  description:
-    'Minesweeper Clone is a single page web application that mimicks the original Minesweeper that comes with Windows OS. This was the very first web application I built a month a half into coding bootcamp. We were instructed to spend a day on the MVP and see how far we get, but I enjoyed working on it so much I spent a few more days on it.',
-  image: { src: minesweeper, alt: 'Minesweeper' },
-  technologies: [
-    Technologies.REACT,
-    Technologies.REDUX,
-    Technologies.NODE,
-    Technologies.EXPRESS,
-  ],
-  githubUrl: 'https://github.com/AndrewK09/Minesweeper',
-  websiteUrl: 'test/test',
-};
+// const dummyData = {
+//   title: 'Test 3',
+//   description:
+//     'Minesweeper Clone is a single page web application that mimicks the original Minesweeper that comes with Windows OS. This was the very first web application I built a month a half into coding bootcamp. We were instructed to spend a day on the MVP and see how far we get, but I enjoyed working on it so much I spent a few more days on it.',
+//   image: { src: minesweeper, alt: 'Minesweeper' },
+//   technologies: [
+//     Technologies.REACT,
+//     Technologies.REDUX,
+//     Technologies.NODE,
+//     Technologies.EXPRESS,
+//   ],
+//   githubUrl: 'https://github.com/AndrewK09/Minesweeper',
+//   websiteUrl: 'test/test',
+// };
 
 export const ProjectData: Project[] = [greenfield, minesweeperClone];
