@@ -66,4 +66,4 @@ const dummyData = {
   websiteUrl: 'test/test',
 };
 
-export const ProjectData: Project[] = [greenfield, minesweeperClone, dummyData];
+export const ProjectData: Project[] = [greenfield, minesweeperClone];
