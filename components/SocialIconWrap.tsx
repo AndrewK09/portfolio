@@ -4,9 +4,10 @@ const SocialIconWrap = ({ url }: { url: string }) => {
   return (
     <SocialIcon
       url={url}
-      fgColor="white"
+      fgColor="currentColor"
       bgColor="transparent"
       target="_blank"
+      className="text-slate-400 hover:text-white"
     />
   );
 };
