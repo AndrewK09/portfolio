@@ -70,10 +70,18 @@ const Contact = () => {
 
       setFormStatus(LOAD_STATE.SUCCESS);
     } catch (error) {
-      console.log('Error sending email - ', error);
+      console.log(
+        'Error sending email - ',
+        error,
+        process.env.NEXT_PUBLIC_SERVICE_ID
+      );
 
       const errorMessage =
-        typeof error === 'string' ? error : 'Error sending email';
+        typeof error === 'string'
+          ? error
+          : typeof error?.text === 'string'
+          ? error.text
+          : 'Error sending email';
 
       toast.error(errorMessage);
 
