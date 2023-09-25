@@ -77,11 +77,7 @@ const Contact = () => {
       );
 
       const errorMessage =
-        typeof error === 'string'
-          ? error
-          : typeof error?.text === 'string'
-          ? error.text
-          : 'Error sending email';
+        typeof error === 'string' ? error : 'Error sending email';
 
       toast.error(errorMessage);
 
