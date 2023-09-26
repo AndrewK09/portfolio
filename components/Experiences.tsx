@@ -22,7 +22,7 @@ const ExperienceLinksList = ({
           className="group w-fit pb-1 font-bold text-white"
           target="_blank"
         >
-          <ExternalLinkIcon className="external-link group-hover:text-primary-green mr-1 h-3 w-3" />
+          <ExternalLinkIcon className="external-link mr-1 h-3 w-3 group-hover:text-primary-green" />
           <span className="group-hover:text-primary-green">
             {link.description}
           </span>
@@ -74,7 +74,7 @@ const ExperienceListItem = ({
           {titleSplit.textStart}
         </span>
 
-        <span className="group-hover:text-primary-green whitespace-nowrap">
+        <span className="whitespace-nowrap group-hover:text-primary-green">
           {' '}
           {titleSplit.textEnd}
           <RightUpArrowIcon className="external-link group-hover:-translate-y-1 group-hover:translate-x-1" />
@@ -112,7 +112,12 @@ const Experiences = () => {
         ))}
       </ul>
 
-      <Link href="/resume.pdf" download className="group inline-flex w-fit ">
+      <Link
+        href="/resume.pdf"
+        download
+        className="group inline-flex w-fit"
+        target="_blank"
+      >
         <span>
           <span className="link-indicator group-hover:border-white">
             Download Full Resume
