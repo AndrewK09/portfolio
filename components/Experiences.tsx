@@ -113,7 +113,7 @@ const Experiences = () => {
       </ul>
 
       <Link
-        href="/resume.pdf"
+        href="/public/resume.pdf"
         download
         className="group inline-flex w-fit"
         target="_blank"
