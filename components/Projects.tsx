@@ -25,24 +25,25 @@ const ProjectListItem = ({
 }) => {
   return (
     <li className="relative mb-12 list-none sm:grid sm:grid-cols-6 sm:grid-rows-6">
-      <div className="shadow-secondary-navy relative -z-10 col-span-full row-span-full shadow-lg">
+      <div className=" relative -z-10 col-span-full row-span-full hidden h-full shadow-lg shadow-secondary-navy sm:block">
         <Image
           src={image.src}
           alt={image.alt}
-          className="opacity-10"
-          objectFit="cover"
+          className="h-auto object-cover opacity-10"
           fill
+          sizes="10vw"
+          priority={true}
         />
       </div>
 
       <div className="relative sm:col-span-full sm:row-span-full sm:px-12 sm:py-12 ">
         <header className="mb-10 text-xl font-bold text-white ">{title}</header>
 
+        {/* Mobile */}
         <Image
           src={image.src}
           alt={image.alt}
-          className="shadow-secondary-navy mb-6 opacity-90 shadow-lg sm:hidden"
-          objectFit="cover"
+          className="mb-6 object-cover opacity-90 shadow-lg shadow-secondary-navy sm:hidden"
         />
 
         <div className="mb-6 rounded-md text-white/70">

@@ -113,10 +113,11 @@ const Experiences = () => {
       </ul>
 
       <Link
-        href="/public/resume.pdf"
+        href="/resume.pdf"
         download
         className="group inline-flex w-fit"
         target="_blank"
+        locale={false}
       >
         <span>
           <span className="link-indicator group-hover:border-white">
