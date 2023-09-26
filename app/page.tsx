@@ -6,27 +6,10 @@ import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import Technologies from '@/components/Technologies';
 import SocialIconWrap from '@/components/SocialIconWrap';
-import Script from 'next/script';
 
 const Portfolio = () => {
   return (
     <div className=" mx-auto w-full max-w-screen-xl px-4 xs:px-10 md:px-20 lg:flex lg:justify-between lg:gap-x-28 lg:px-16">
-      <Script
-        strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-      />
-
-      <Script strategy="lazyOnload" id="google-analytics">
-        {`
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
-                    page_path: window.location.pathname,
-                    });
-                `}
-      </Script>
-
       <header className="py-52 lg:sticky  lg:top-0 lg:flex lg:max-h-screen lg:min-w-fit lg:flex-col lg:justify-between lg:py-24 lg:pb-20 2xl:w-2/5">
         <div>
           <h1 className="text-4xl font-extrabold text-slate-100 xs:text-5xl sm:text-6xl md:text-7xl lg:text-6xl">

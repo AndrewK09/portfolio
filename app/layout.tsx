@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <GoogleAnalytics
-        GA_TRACKING_ID={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS as string}
+        GA_TRACKING_ID={process.env.NEXT_PUBLIC_GA_TRACKING_ID as string}
       />
 
       <body className="bg-primary-navy leading-relaxed text-slate-400 antialiased selection:bg-secondary-green selection:text-secondary-navy">
