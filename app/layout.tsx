@@ -3,7 +3,6 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Toaster } from 'react-hot-toast';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
-import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: 'Andrew Kan',
