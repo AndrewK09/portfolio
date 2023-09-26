@@ -17,17 +17,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <Script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-T385HS4NHD"
-      ></Script>
-      <Script id="google-analytics">
-        {`window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-T385HS4NHD')`}
-      </Script>
       <GoogleAnalytics
         GA_TRACKING_ID={process.env.NEXT_PUBLIC_GA_TRACKING_ID as string}
       />
