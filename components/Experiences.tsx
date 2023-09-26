@@ -112,12 +112,11 @@ const Experiences = () => {
         ))}
       </ul>
 
-      <Link
+      <a
         href="/resume.pdf"
         download
         className="group inline-flex w-fit"
         target="_blank"
-        locale={false}
       >
         <span>
           <span className="link-indicator group-hover:border-white">
@@ -129,7 +128,7 @@ const Experiences = () => {
             <RightArrowIcon className="external-link group-hover:translate-x-2 " />
           </span>
         </span>
-      </Link>
+      </a>
     </section>
   );
 };

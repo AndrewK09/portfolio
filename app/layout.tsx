@@ -3,6 +3,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Toaster } from 'react-hot-toast';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: 'Andrew Kan',
@@ -16,6 +17,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-T385HS4NHD"
+        id="google-analytics"
+      ></Script>
+      <script>
+        {`window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-T385HS4NHD')`}
+      </script>
       <GoogleAnalytics
         GA_TRACKING_ID={process.env.NEXT_PUBLIC_GA_TRACKING_ID as string}
       />

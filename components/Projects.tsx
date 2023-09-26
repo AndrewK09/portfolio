@@ -32,7 +32,6 @@ const ProjectListItem = ({
           className="h-auto object-cover opacity-10"
           fill
           sizes="10vw"
-          priority={true}
         />
       </div>
 
