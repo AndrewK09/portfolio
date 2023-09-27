@@ -20,10 +20,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
+      {/* <GoogleAnalytics
+        GA_TRACKING_ID={process.env.NEXT_PUBLIC_GA_TRACKING_ID as string}
+      /> */}
       <Suspense>
-        <GoogleAnalytics
-          GA_TRACKING_ID={process.env.NEXT_PUBLIC_GA_TRACKING_ID as string}
-        />
+        <GoogleAnalytics />
       </Suspense>
       <noscript
         dangerouslySetInnerHTML={{
