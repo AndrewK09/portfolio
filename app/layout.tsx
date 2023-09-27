@@ -7,6 +7,7 @@ import GoogleAnalytics from '@/components/GoogleAnalytics';
 import './globals.css';
 // import Script from 'next/script';
 import { Suspense } from 'react';
+import GoogleTagManager from '@magicul/next-google-tag-manager';
 
 export const metadata: Metadata = {
   title: 'Andrew Kan',
@@ -23,9 +24,11 @@ export default function RootLayout({
       {/* <GoogleAnalytics
         GA_TRACKING_ID={process.env.NEXT_PUBLIC_GA_TRACKING_ID as string}
       /> */}
-      <Suspense>
+      {/* <Suspense>
         <GoogleAnalytics />
-      </Suspense>
+      </Suspense> */}
+      <GoogleTagManager id={process.env.NEXT_PUBLIC_GTM as string} />
+
       <noscript
         dangerouslySetInnerHTML={{
           __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}" height="0" width="0" style="display: none; visibility: hidden;"></iframe>`,
