@@ -5,7 +5,7 @@ import ActiveSectionContextProvider from '@/context/active-section-context';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 
 import './globals.css';
-import Script from 'next/script';
+// import Script from 'next/script';
 import { Suspense } from 'react';
 
 export const metadata: Metadata = {
