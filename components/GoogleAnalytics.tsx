@@ -18,28 +18,22 @@ const GoogleAnalytics = ({ GA_TRACKING_ID }: { GA_TRACKING_ID: string }) => {
   return (
     <>
       <Script
-        strategy="beforeInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+        strategy="afterInteractive"
       />
       <Script
         id="google-analytics"
-        strategy="beforeInteractive"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
 
-        gtag('consent', 'default', {
-            'analytics_storage': 'denied'
-        });
-        
-        gtag('config', '${GA_TRACKING_ID}', {
-            page_path: window.location.pathname,
-        });
+          gtag('config', '${GA_TRACKING_ID}');
         `,
         }}
-      />
+      ></Script>
     </>
   );
 };
