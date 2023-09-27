@@ -24,7 +24,7 @@ const GoogleAnalytics = ({ GA_TRACKING_ID }: { GA_TRACKING_ID: string }) => {
 
       <Script
         id="google-analytics"
-        strategy="beforeInteractive"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
         window.dataLayer = window.dataLayer || [];
