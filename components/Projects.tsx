@@ -43,6 +43,7 @@ const ProjectListItem = ({
           src={image.src}
           alt={image.alt}
           className="mb-6 object-cover opacity-90 shadow-lg shadow-secondary-navy sm:hidden"
+          sizes="10vw"
         />
 
         <div className="mb-6 rounded-md text-white/70">
