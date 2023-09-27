@@ -33,7 +33,11 @@ export default function RootLayout({
         `}
       </Script>
       {/* </head> */}
-
+      <noscript
+        dangerouslySetInnerHTML={{
+          __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}" height="0" width="0" style="display: none; visibility: hidden;"></iframe>`,
+        }}
+      />
       <body className="bg-primary-navy leading-relaxed text-slate-400 antialiased selection:bg-secondary-green selection:text-secondary-navy">
         <ActiveSectionContextProvider>
           <Toaster position="top-right" />
