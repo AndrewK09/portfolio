@@ -1,8 +1,11 @@
-import ActiveSectionContextProvider from '@/context/active-section-context';
-import './globals.css';
+import Head from 'next/head';
 import type { Metadata } from 'next';
 import { Toaster } from 'react-hot-toast';
+
+import ActiveSectionContextProvider from '@/context/active-section-context';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
+
+import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Andrew Kan',
@@ -16,11 +19,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <head>
+      <Head>
         <GoogleAnalytics
           GA_TRACKING_ID={process.env.NEXT_PUBLIC_GA_TRACKING_ID as string}
         />
-      </head>
+      </Head>
 
       <body className="bg-primary-navy leading-relaxed text-slate-400 antialiased selection:bg-secondary-green selection:text-secondary-navy">
         <ActiveSectionContextProvider>
