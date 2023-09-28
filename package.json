@@ -16,6 +16,7 @@
     "@types/react-dom": "18.2.7",
     "eslint-config-next": "13.4.19",
     "next": "13.4.19",
+    "posthog-js": "^1.81.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hot-toast": "^2.4.1",

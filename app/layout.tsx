@@ -2,12 +2,9 @@ import type { Metadata } from 'next';
 import { Toaster } from 'react-hot-toast';
 
 import ActiveSectionContextProvider from '@/context/active-section-context';
-import GoogleAnalytics from '@/components/GoogleAnalytics';
+import Providers from './providers';
 
 import './globals.css';
-// import Script from 'next/script';
-import { Suspense } from 'react';
-import GoogleTagManager from '@magicul/next-google-tag-manager';
 
 export const metadata: Metadata = {
   title: 'Andrew Kan',
@@ -22,11 +19,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className="bg-primary-navy leading-relaxed text-slate-400 antialiased selection:bg-secondary-green selection:text-secondary-navy">
-        <GoogleTagManager id={process.env.NEXT_PUBLIC_GTM as string} />
-        <ActiveSectionContextProvider>
-          <Toaster position="top-right" />
-          {children}
-        </ActiveSectionContextProvider>
+        <Providers>
+          <ActiveSectionContextProvider>
+            <Toaster position="top-right" />
+            {children}
+          </ActiveSectionContextProvider>
+        </Providers>
       </body>
     </html>
   );
