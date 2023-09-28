@@ -62,7 +62,10 @@ const ProjectListItem = ({
           {githubUrl ? (
             <div
               onClick={() => {
-                posthog.capture(`${title}_click`);
+                posthog.capture(`${title}_click`, {
+                  click_type: 'github',
+                  title,
+                });
               }}
             >
               <SocialIconWrap url={githubUrl} />
