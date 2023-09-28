@@ -7,6 +7,7 @@ import { NavLinkType } from '@/lib/data';
 import { ProjectData } from '@/lib/project-data';
 
 import SocialIconWrap from './SocialIconWrap';
+import { posthog } from 'posthog-js';
 
 const ProjectListItem = ({
   title,
@@ -58,7 +59,15 @@ const ProjectListItem = ({
         </ul>
 
         <div className="flex flex-row justify-end space-x-4">
-          {githubUrl ? <SocialIconWrap url={githubUrl} /> : null}
+          {githubUrl ? (
+            <div
+              onClick={() => {
+                posthog.capture(`${title}_click`);
+              }}
+            >
+              <SocialIconWrap url={githubUrl} />
+            </div>
+          ) : null}
           {websiteUrl ? <SocialIconWrap url={websiteUrl} /> : null}
         </div>
       </div>
