@@ -21,11 +21,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <head>
-        <GoogleTagManager id={process.env.NEXT_PUBLIC_GTM as string} />
-      </head>
-
       <body className="bg-primary-navy leading-relaxed text-slate-400 antialiased selection:bg-secondary-green selection:text-secondary-navy">
+        <GoogleTagManager id={process.env.NEXT_PUBLIC_GTM as string} />
         <ActiveSectionContextProvider>
           <Toaster position="top-right" />
           {children}
