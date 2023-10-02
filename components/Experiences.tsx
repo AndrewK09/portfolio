@@ -19,13 +19,11 @@ const ExperienceLinksList = ({
       <li key={link.href}>
         <Link
           href={link.href}
-          className="group w-fit pb-1 font-bold text-white"
+          className="relative w-fit pb-1 font-bold text-white hover:text-primary-green focus-visible:text-teal-300"
           target="_blank"
         >
-          <ExternalLinkIcon className="external-link mr-1 h-3 w-3 group-hover:text-primary-green" />
-          <span className="group-hover:text-primary-green">
-            {link.description}
-          </span>
+          <ExternalLinkIcon className="external-link mr-1 h-3 w-3" />
+          {link.description}
         </Link>
       </li>
     ))}
@@ -62,32 +60,37 @@ const ExperienceListItem = ({
   const titleSplit = separateLastWordOfText(title.description);
 
   return (
-    <li className="mb-12">
-      <header className="mb-1 text-sm">{date}</header>
+    <li className="group relative mb-12 pb-1 transition-all motion-reduce:transition-none lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+      <div className="absolute -inset-x-6 -inset-y-4 -z-10 hidden rounded lg:block lg:group-hover:bg-slate-800/50 "></div>
 
-      <Link
-        className="group mb-3 w-fit  items-center text-lg font-medium text-slate-200"
-        href={title.href}
-        target="_blank"
-      >
-        <span className="group-hover:text-primary-green">
-          {titleSplit.textStart}
-        </span>
+      <div>
+        <header className="mb-1 text-sm">{date}</header>
 
-        <span className="whitespace-nowrap group-hover:text-primary-green">
-          {' '}
-          {titleSplit.textEnd}
-          <RightUpArrowIcon className="external-link group-hover:-translate-y-1 group-hover:translate-x-1" />
-        </span>
-      </Link>
+        <Link
+          className="group/link font-medium text-slate-200  hover:text-teal-300 focus-visible:text-teal-300"
+          href={title.href}
+          target="_blank"
+          aria-label={title.description}
+        >
+          <span className="absolute -inset-x-6 -inset-y-4 hidden rounded lg:block"></span>
+          <span>
+            {titleSplit.textStart}
+            <span className="whitespace-nowrap">
+              {' '}
+              {titleSplit.textEnd}
+              <RightUpArrowIcon className="external-link group-hover/link:-translate-y-1 group-hover/link:translate-x-1" />
+            </span>
+          </span>
+        </Link>
 
-      <p className="mb-3">{description}</p>
+        <p className="mb-3">{description}</p>
 
-      {links.length ? <ExperienceLinksList links={links} /> : null}
+        {links.length ? <ExperienceLinksList links={links} /> : null}
 
-      {technologies.length ? (
-        <ExperienceTechList technologies={technologies} />
-      ) : null}
+        {technologies.length ? (
+          <ExperienceTechList technologies={technologies} />
+        ) : null}
+      </div>
     </li>
   );
 };
@@ -99,7 +102,7 @@ const Experiences = () => {
     <section id={NavLinkType.EXPERIENCE} ref={ref}>
       <h1 className="head_text">EXPERIENCE</h1>
 
-      <ul>
+      <ul className="group/list">
         {ExperienceData.map((experience) => (
           <ExperienceListItem
             key={experience.title.href}
@@ -125,7 +128,7 @@ const Experiences = () => {
           <span className="link-indicator whitespace-nowrap group-hover:border-white">
             {' '}
             Resume
-            <RightArrowIcon className="external-link group-hover:translate-x-2 " />
+            <RightArrowIcon className="external-link group-hover:translate-x-2 group-focus-visible:translate-x-2" />
           </span>
         </span>
       </a>
